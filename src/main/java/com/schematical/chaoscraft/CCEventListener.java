@@ -103,7 +103,7 @@ public class CCEventListener {
     @SideOnly(Side.CLIENT)
     @SubscribeEvent
     public static void render(RenderGameOverlayEvent.Post event){
-        if(ChaosCraft.fontRenderer == null){
+      /*  if(ChaosCraft.fontRenderer == null){
             ChaosCraft.fontRenderer = Minecraft.getMinecraft().fontRenderer;
         }
         if(ChaosCraft.topLeftMessage != null) {
@@ -113,7 +113,7 @@ public class CCEventListener {
                 ChaosCraft.fontRenderer.drawStringWithShadow(part, 5, placement, 0xFFFFFF);
                 placement += 10;
             }
-        }
+        }*/
 
     }
 
@@ -121,38 +121,10 @@ public class CCEventListener {
     @SubscribeEvent
     public static void debugRenderer(RenderWorldLastEvent event) {
         EntityPlayer player = Minecraft.getMinecraft().player;
-        if(player == null){
+        if(player == null) {
             return;
         }
-       /* ChaosCraftGUI.drawDebugBox(
-                new Vec3d(
-                        axisAlignedBB.minX,
-                        axisAlignedBB.minY,
-                        axisAlignedBB.minZ
-                        //-256, 64, 266
-                ),
-                new Vec3d(
-                        axisAlignedBB.maxX,
-                        axisAlignedBB.maxY,
-                        axisAlignedBB.maxZ
-                        //-300,80,300
-                ),
-                Color.GREEN
-        );
-
-        ChaosCraftGUI.drawDebugLine(
-                new BlockPos(
-                        -256, 64, 266
-                ),
-                new BlockPos(
-                        -300,80,300
-                ),
-                new Color(255, 155, 61, 255)
-        );*/
-
-//       for(ChunkPos pos : ForgeChunkManager.getPersistentChunksFor())
-
-        ChaosCraftGUI.render(event);
+    //    ChaosCraftGUI.render(event);
 
     }
     @SideOnly(Side.CLIENT)

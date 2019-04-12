@@ -29,6 +29,7 @@ public class ChaosCraftGUI {
     private static ArrayList<CCBox> toRenderBoxs = new ArrayList<CCBox>();
 
     public static void render(RenderWorldLastEvent event){
+
         EntityPlayer player = Minecraft.getMinecraft().player;
 
         double partialTicks = (double) event.getPartialTicks();
